@@ -1,13 +1,10 @@
-odoo.define('mail_message_mac/static/src/js/message.js', function (require) {
-'use strict';
+/** @odoo-module **/
 
-const {
-    registerInstancePatchModel,
-    registerFieldPatchModel,
+import {
     registerClassPatchModel,
-} = require('mail/static/src/model/model_core.js');
-const { attr, many2many, many2one, one2many } = require('mail/static/src/model/model_field.js');
-
+    registerFieldPatchModel,
+} from '@mail/model/model_core';
+import { attr } from '@mail/model/model_field';
 
 registerFieldPatchModel('mail.message', 'mail_message_mac/static/src/js/message.js', {
     /**
@@ -32,9 +29,6 @@ registerClassPatchModel('mail.message', 'mail_message_mac/static/src/js/message.
     },
 });
 
-/*if you need to override the function other than static, you have to patch the Instance not registerInstancePatchModel*/
-
-});
 
 
 

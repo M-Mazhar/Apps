@@ -10,18 +10,23 @@
     'author': "Silverdaletech",
     'website': "http://www.silverdaletech.com",
     'category': 'Message',
-    'version': '14.0',
+    'version': '15.0',
     'sequence': 2,
     'depends': ['base', 'web', 'mail'],
 
     'data': [
-        'views/assets.xml',
         'views/mail_message.xml',
     ],
 
-    'qweb': [
-        "static/src/xml/message.xml",
-    ],
+    'assets': {
+        'web.assets_backend': [
+            'mail_message_mac/static/src/js/message.js',
+
+        ],
+        'web.assets_qweb': [
+            'mail_message_mac/static/src/xml/message.xml',
+        ],
+    },
     "installable": True,
     "auto_install": False,
     'application': True,

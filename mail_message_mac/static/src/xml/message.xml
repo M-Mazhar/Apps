@@ -3,11 +3,11 @@
 
     <t t-inherit="mail.Message" t-inherit-mode="extension">
         <!--<xpath expr="//div[hasclass('o_Message_authorName')]" position="after">
-            <div id="o_Message_mac_address"  class="o_Message_mac_address"> <t t-esc="message.mac_address"/> </div>
+            <div id="o_Message_mac_address"  class="o_Message_mac_address"> <t t-esc="messageView.message.mac_address"/> </div>
         </xpath>-->
         <xpath expr="//div[hasclass('o_Message_authorName')]" position="attributes" >
            <attribute name="title"/>
-           <attribute name="t-att-title"> message.mac_address </attribute>
+           <attribute name="t-att-title"> messageView.message.mac_address </attribute>
         </xpath>
     </t>
 </templates>
